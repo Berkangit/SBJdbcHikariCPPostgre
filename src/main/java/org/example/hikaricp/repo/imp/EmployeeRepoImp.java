@@ -2,6 +2,7 @@ package org.example.hikaricp.repo.imp;
 
 import org.example.hikaricp.model.Employee;
 import org.example.hikaricp.repo.EmployeeRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -10,6 +11,7 @@ import java.util.List;
 @Repository
 public class EmployeeRepoImp implements EmployeeRepo {
 
+    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     public JdbcTemplate getJdbcTemplate() {
